@@ -58,8 +58,12 @@ def nonRestoringDivision(Q, M, A):
             Q = Q[1:] + "0"
             print("  -Unsuccessful")
 
-            flag = "unsuccessful"
-            print("A:", A, " Q:", Q, " -Addition in next Step")
+            if count == 1:
+                A = add(A, M)
+                print("A:", A, " Q:", Q, " -Restoration ")
+            else:
+                flag = "unsuccessful"
+                print("A:", A, " Q:", Q, " -Addition in next Step")
 
         else:
 
