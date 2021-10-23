@@ -23,7 +23,7 @@ def compliment(m):
 
         M += str((int(m[i]) + 1) % 2)
 
-    M = add(M, "0001")
+    M = add(M, "0" * (len(m) - 1) + "1")
     return M
 
 
@@ -79,8 +79,8 @@ def nonRestoringDivision(Q, M, A):
 # Driver code
 if __name__ == "__main__":
 
-    dividend = "0111"
-    divisor = "0011"
+    dividend = "01110"
+    divisor = "00110"
 
     accumulator = "0" * len(dividend)
 
